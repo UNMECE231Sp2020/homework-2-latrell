@@ -4,7 +4,7 @@ class Complex{
 	private:
 	
 	       double _real;
-	       double _imag:;
+	       double _imag;
 
 	public:
 	   Complex();
@@ -15,7 +15,7 @@ class Complex{
 	   double get_real() const;
 	   double get_imag() const;
 
-           void print_func();
+       void print_func();
 
 	   Complex Add(Complex x);
 	   Complex Sub(Complex x);
@@ -32,9 +32,7 @@ class Complex{
 	   Complex operator/(Complex z);
 	   Complex operator=(Complex z);
 
-std::ostream& operator << (std::ostream &out, const Complex &z);
-std::istream& operator >> (std::istream &in, Complex &z);
+		std::ostream& operator << (std::ostream &out, const Complex &z);
+		std::istream& operator >> (std::istream &in, Complex &z);
 
 };
-
-

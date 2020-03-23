@@ -13,8 +13,8 @@ Complex::Complex (double real, double imag) {
 }
 
 Complex::Complex (const Complex &point) {
-	_real = point.real;
-	_imag = point.imag;
+	_real = point._real;
+	_imag = point._imag;
 }
 
 double Complex::get_real() const {
@@ -45,12 +45,14 @@ double Complex::Phase() {
 	return (ph < 0) ? -ph :ph;
 }
 
+//TODO: Missing return type
 Complex::Conj() {
 	Complex y;
 	y._imag *= -1;
 	return y;
 }
 
+//TODO: Missing return type
 Complex::Add(Complex x) {
 	Complex y;
 	y._real = _real + x._real;
@@ -58,6 +60,7 @@ Complex::Add(Complex x) {
 	return y;
 }
 
+//TODO: Missing return type
 Complex::Sub(Complex x) {
 	Complex y;
 	y._real = _real - x._real;
@@ -65,12 +68,14 @@ Complex::Sub(Complex x) {
 	return y;
 }
 
+//TODO: Missing return type
 Complex::Mult(Complex x) {
 	y._real = x._real * _real - x._imag * _imag;
 	y._imag = x._imag * _imag - x._real * _real;
 	return y;
 }
 
+//TODO: Missing return type
 Complex::Div(Complex x) {
 	double denom = x.mag * x.mag;
 	if (denom == 0) {
